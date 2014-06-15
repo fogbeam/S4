@@ -1,0 +1,333 @@
+/* globals */
+/* line 2, content/style/style.scss */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 13, content/style/style.scss */
+body {
+  font-family: "Lucida Grande";
+  font-size: 90%;
+  background-color: #efefef;
+  color: #333;
+}
+/* line 18, content/style/style.scss */
+body code, body pre {
+  background-color: #efefef;
+  font-color: black;
+}
+
+/* line 24, content/style/style.scss */
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted #222;
+}
+
+/* line 30, content/style/style.scss */
+a:hover {
+  background: #ccc;
+  color: #000;
+}
+
+/* line 31, content/style/style.scss */
+a:visited {
+  background: #ccc;
+  color: #000;
+}
+
+/* line 33, content/style/style.scss */
+#wrapper {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background: #fff;
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+
+/* line 42, content/style/style.scss */
+#header {
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#dfdfdf));
+  /* for webkit browsers */
+  background: -moz-linear-gradient(top, #fafafa, #dfdfdf);
+  /* for firefox 3.6+ */
+  height: 110px;
+}
+
+/* line 49, content/style/style.scss */
+#footer {
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dfdfdf), to(#fafafa));
+  /* for webkit browsers */
+  background: -moz-linear-gradient(top, #dfdfdf, #fafafa);
+  /* for firefox 3.6+ */
+  color: #555;
+  font-size: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+/* line 59, content/style/style.scss */
+#header .container {
+  overflow: visible;
+  position: relative;
+}
+
+/* line 64, content/style/style.scss */
+#header #logo {
+  left: 0;
+  position: absolute;
+  top: 25px;
+}
+
+/* line 70, content/style/style.scss */
+#logo a {
+  border: none;
+}
+
+/* line 74, content/style/style.scss */
+#logo a:hover {
+  text-decoration: none;
+  background: none;
+}
+
+/* line 79, content/style/style.scss */
+#header img {
+  padding: 5px;
+}
+
+/* navbar */
+/*
+#navbar {
+	position: absolute;
+	right: 0;
+	top: 60px;
+}
+
+#navbar a {
+	border: none;
+	border-left:1px solid #DDDDDD;
+	font-size:1em;
+	padding:0.5em 1em;
+	text-decoration:none;
+	color:		$sec_header; 
+	background: none;
+}
+
+#navbar a.first {
+	border:0 none;
+}
+
+#navbar a:hover { text-decoration: none; }
+#navbar a:visited { text-decoration: none; }
+#navbar a:active { text-decoration: none; }
+#navbar a.active { 
+   border-bottom: 3px solid #222;
+}
+
+*/
+/* line 114, content/style/style.scss */
+.large {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* line 119, content/style/style.scss */
+.small {
+  font-size: 90%;
+  color: #555;
+  line-height: 1.2;
+}
+
+/* line 125, content/style/style.scss */
+span.copyright {
+  text-shadow: 1px 1px 0 #FFFFFF;
+  color: #999;
+}
+
+/* line 134, content/style/style.scss */
+.titleheader {
+  font-size: 30px;
+  text-shadow: #fff 0px 1px 0;
+  /*	color: #C17878; */
+  color: #7e2217;
+  margin-bottom: 20px;
+}
+
+/* line 142, content/style/style.scss */
+.secheader, h1 {
+  font-size: 25px;
+  text-shadow: #fff 0px 1px 0;
+  /*	color: #C17878; */
+  color: #7e2217;
+  margin-top: 20px;
+}
+
+/* line 150, content/style/style.scss */
+.subsecheader, h2 {
+  font-size: 20px;
+  text-shadow: #fff 0px 1px 0;
+  /*	color: #C17878; */
+  color: #7e2217;
+  margin-top: 20px;
+}
+
+/* line 158, content/style/style.scss */
+.subsecheader a {
+  color: #7e2217;
+}
+
+/* line 162, content/style/style.scss */
+.subssubecheader, h3 {
+  font-size: 16px;
+  text-shadow: #fff 0px 1px 0;
+  /*	color: #C17878; */
+  color: #7e2217;
+  margin-top: 20px;
+}
+
+/* line 172, content/style/style.scss */
+.horrule {
+  margin-top: 30px;
+  border-top: 1px solid #DDDDDD;
+  clear: both;
+}
+
+/* line 178, content/style/style.scss */
+#os_logo {
+  height: 100px;
+  padding: 10px;
+}
+
+/* line 183, content/style/style.scss */
+.sidetext {
+  border-left: 4px solid #ddd;
+  padding-left: 4px;
+}
+
+/* line 188, content/style/style.scss */
+#download {
+  padding: 20px;
+  background: #dfdfdf;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px dotted #ddd;
+}
+
+/* line 197, content/style/style.scss */
+#latest_head {
+  font-size: 14px;
+  text-shadow: #fff 0px 1px 0;
+  margin: 0;
+  color: #7e2217;
+}
+
+/* line 206, content/style/style.scss */
+#latest_link {
+  background: #fefefe;
+  border: none;
+  padding: 3px;
+  margin-top: 10px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 80%;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* line 219, content/style/style.scss */
+#disclaimer {
+  color: #555;
+  margin-top: 20px;
+  font-size: 80%;
+}
+
+/* line 225, content/style/style.scss */
+#latest_link a:hover {
+  background: none;
+}
+
+/* line 229, content/style/style.scss */
+#maintainers {
+  margin-top: 20px;
+}
+
+/* line 233, content/style/style.scss */
+.greybar {
+  border-left: 4px solid #ddd;
+  padding-left: 10px;
+}
+
+/* line 238, content/style/style.scss */
+ul.greybar {
+  list-style-type: none;
+}
+
+/* line 243, content/style/style.scss */
+#twitter_widget a {
+  border: none;
+}
+/* line 244, content/style/style.scss */
+#twitter_widget a:hover {
+  border: none;
+  background: inherit;
+  text-decoration: none;
+}
+/* line 245, content/style/style.scss */
+#twitter_widget a:visited {
+  border: none;
+  background: inherit;
+}
+/* line 246, content/style/style.scss */
+#twitter_widget a:active {
+  border: none;
+  background: inherit;
+}
+
+/* line 250, content/style/style.scss */
+#twitter_follow a {
+  border: none;
+}
+
+/* line 253, content/style/style.scss */
+.tabular table {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* line 258, content/style/style.scss */
+input[type="text"], input[type="password"], input.text, input.title, textarea, select {
+  margin: 1em 0;
+}
+
+/* line 262, content/style/style.scss */
+input[type="text"], input[type="password"], input.text, input.title, textarea {
+  padding: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  color: #222;
+}
+
+/* line 270, content/style/style.scss */
+#notice {
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #dfdfdf;
+  color: #444;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: left;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* line 284, content/style/style.scss */
+#notice a {
+  color: #7E2217;
+}

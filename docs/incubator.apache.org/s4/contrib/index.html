@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S4: Contribute</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="A general-purpose distributed stream computing platform" name="description">
+    <link href="../style/screen.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../style/print.css" media="print" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <link href="../style/ie.css" media="screen" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <link href="../style/style.css" rel="stylesheet" type="text/css">
+    <link href="../style/nav.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19490961-1']);
+        _gaq.push(['_setDomainName', 'incubator.apache.org']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    <link href="../style/coderay.css" rel="stylesheet" type="text/css">
+    <link href="../style/pygmentize.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div id="logo">
+          <a href="../">
+            <img src="../images/s4_test.png">
+          </a>
+        </div>
+        <div id="navbar">
+          <ul id="nav">
+            <li>
+              <a href="../">home</a>
+            </li>
+            <li>
+              <a href="../doc/0.6.0">doc</a>
+            </li>
+            <li>
+              <a href="http://git-wip-us.apache.org/repos/asf?p=incubator-s4.git" onclick="_gaq.push(['_trackEvent', 'External', 'Apache Git', 'http://github.com/s4']);">code</a>
+            </li>
+            <li>
+              <a href="http://people.apache.org/~mmorel/apache-s4-0.6.0-incubating-doc/javadoc/">API</a>
+            </li>
+            <li>
+              <a href=".">get involved</a>
+            </li>
+            <li>
+              <a href="../team">team</a>
+            </li>
+            <li>
+              <a href="../download">download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="container" id="container">
+        <div class="span-18 colborder" id="main">
+          <!-- collaboration -->
+          <h2 class="secheader">collaboration model</h2>
+          <p>The project is maintain by volunteers and is open to anybody interested in contributing to the project. To contribute, you can write code, review code, report bugs, suggest ideas, propose design changes, write documentation, answer questions in the mailing list, and much more. The more you contribute the more you can make a difference.</p>
+          <!-- version control -->
+          <h2 class="secheader">version control</h2>
+          <p>S4 sources are available through <b>git</b>. Most development is done on the <i>piper</i> branch</p>
+          <p>See a summary <a href="https://git-wip-us.apache.org/repos/asf?p=incubator-s4.git;a=summary">here.</a></p>
+          <!-- access to the repository -->
+          <h2 class="secheader">access to the repository</h2>
+          <ul>
+            <li>as a committer: <pre>git clone https://user_name@git-wip-us.apache.org/repos/asf/incubator-s4.git</pre>
+</li>
+            <li>as a user or contributor: <pre>git clone http://git-wip-us.apache.org/repos/asf/incubator-s4.git</pre> (though since June 2012, you may have to try with <b>https</b> :<pre>git clone https://git-wip-us.apache.org/repos/asf/incubator-s4.git</pre> , even though this is not reflected yet on the Apache git documentation).</li>
+          </ul>
+          <ul></ul>
+          <p>For more information, have a look there: <a href="https://git-wip-us.apache.org/">https://git-wip-us.apache.org/</a></p>
+          <!-- eclipse project -->
+          <h2 class="secheader">creating an eclipse project</h2>
+          <p>type: </p>
+<pre>./gradlew eclipse</pre> You can now import the project into Eclipse. To learn more, visit the <b><a href="http://www.gradle.org">Gradle website</a></b>.
+          <!-- submission guidelines -->
+          <h2 class="secheader">submission guidelines</h2>
+          <p>Before you start, send a message to the S4 developer <b><a href="https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists">mailing list</a></b>, or file a bug report in <b><a href="https://issues.apache.org/jira/browse/S4">Jira</a></b>. Describe your proposed changes and check that they fit in with what others are doing and have planned for the project.</p>
+          <!-- modifying the source code -->
+          <h2 class="secheader">modifying the source code</h2>
+          <p>Here are a few things to keep in mind:</p>
+          <ol>
+            <li>All public classes, interfaces, and methods should have informative <b><a href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">Javadoc comments</a></b>.</li>
+            </ol>
+<ul>
+              <li>BAD: <span class="high">getCondensedLength()</span>: Gets condensed length.</li>
+              <li>BETTER: <span class="high">getCondensedLength()</span>: Number of characters in the string, excluding non alpha-numeric characters.</li>
+            </ul>
+            <li>Do not use @author tags.</li>
+            <li>Code should be written according to <b><a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Java's conventions</a></b>.</li>
+            <li>Formatting: (from S4 0.5, see "automatic formatting" below)</li>
+            <ul>
+              <li>Indent four spaces per level, not two or six or eight, etc... four.</li>
+              <li>No tabs for indentation, spaces only.</li>
+            </ul>
+            <li>Contributions should pass existing unit tests.</li>
+            <li>New unit tests should be provided to demonstrate bugs and fixes. <b><a href="http://www.junit.org">Junit</a></b> is our test framework.</li>
+          
+          <!-- automatic source code formatting -->
+          <h2 class="secheader">automatic source code formatting</h2>
+          <p>You must configure your IDE to follow the formatting guidelines. This is needed to get clean diffs.</p>
+          <p>To automatically format code in Eclipse:</p>
+          <ol>
+            <li>preferences --&gt; Java --&gt; Code style --&gt; Formatter , then import s4/config/eclipse/s4-eclipse-format.xml</li>
+            <li>preferences --&gt; Java --&gt; Editor --&gt; Save actions --&gt; format source code,  format all lines</li>
+          </ol>
+          <p>If you don't use Eclipse, you may still use Eclipse's code formatter in a <a href="http://www.peterfriese.de/formatting-your-code-using-the-eclipse-code-formatter/">standalone mode.</a></p>
+        </div>
+        <div class="span-5 last" id="contrib_sidebar">
+          <div id="participate">
+            <h2 class="secheader">participate</h2>
+            <ul class="large greybar">
+              <li>Join the <a href="https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists" onclick="_gaq.push(['_trackEvent', 'External', 'Forum', 'Contrib 2 - https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists']);">forum</a>
+</li>
+            </ul>
+          </div>
+          <div id="twitter_follow">
+            <a href="http://www.twitter.com/s4project" onclick="_gaq.push(['_trackEvent', 'External', 'Twitter', 'Contrib - http://www.twitter.com/s4project']);">
+              <img alt="Follow s4project on Twitter" src="http://twitter-badges.s3.amazonaws.com/follow_us-b.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <span class="copyright">Apache S4 - Copyright 2013 The Apache Software Foundation</span>
+      </div>
+    </div>
+  </body>
+</html>

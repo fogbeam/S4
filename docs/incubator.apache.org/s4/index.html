@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S4: Distributed Stream Computing Platform</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="A general-purpose distributed stream computing platform" name="description">
+    <link href="style/screen.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="style/print.css" media="print" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <link href="style/ie.css" media="screen" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/nav.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19490961-1']);
+        _gaq.push(['_setDomainName', 'incubator.apache.org']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    <link href="style/coderay.css" rel="stylesheet" type="text/css">
+    <link href="style/pygmentize.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div id="logo">
+          <a href="./">
+            <img src="images/s4_test.png">
+          </a>
+        </div>
+        <div id="navbar">
+          <ul id="nav">
+            <li>
+              <a href="./">home</a>
+            </li>
+            <li>
+              <a href="doc/0.6.0">doc</a>
+            </li>
+            <li>
+              <a href="http://git-wip-us.apache.org/repos/asf?p=incubator-s4.git" onclick="_gaq.push(['_trackEvent', 'External', 'Apache Git', 'http://github.com/s4']);">code</a>
+            </li>
+            <li>
+              <a href="http://people.apache.org/~mmorel/apache-s4-0.6.0-incubating-doc/javadoc/">API</a>
+            </li>
+            <li>
+              <a href="contrib">get involved</a>
+            </li>
+            <li>
+              <a href="team">team</a>
+            </li>
+            <li>
+              <a href="download">download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="container" id="container">
+        <div class="span-18 colborder" id="main">
+          <div class="span-18 last" id="about">
+            <div class="span-17 last" id="notice">
+              <div id="notice_text">June 2013: <b>S4 0.6.0 released,</b> get it <a href="download">here</a>!</div>
+            </div>
+            <div class="span-17 last" id="notice">
+              <div id="notice_text">S4 0.6.0 focuses on configurability and performance. More information is available in an <a href="http://incubator.apache.org/s4/doc/0.6.0/overview/">overview</a> and you may also check the <a href="http://www.apache.org/dist/incubator/s4/s4-0.6.0-incubating/RELEASE_NOTES.html">release notes</a>.</div>
+            </div>
+            <p class="large">S4 is a <span class="high">general-purpose</span>, <span class="high">distributed</span>, <span class="high">scalable</span>, <span class="high">fault-tolerant</span>, <span class="high">pluggable</span> platform that allows programmers to easily develop applications for processing continuous unbounded streams of data.</p>
+            <div class="horrule"></div>
+            <div class="span-9" id="sec_motivation">
+              <h2 class="secheader">motivation</h2>
+              <p>S4 fills the gap between complex proprietary systems and batch-oriented open source computing platforms. We aim to develop a high performance computing platform that hides the complexity inherent in parallel processing system from the application programmer.</p>
+            </div>
+            <div class="span-9 last" id="sec_implementation">
+              <h2 class="secheader">implementation</h2>
+              <p>The core platform is written in <span class="high">Java</span>. The implementation is modular and pluggable, and S4 applications can be easily and dynamically combined for creating more sophisticated stream processing systems.</p>
+            </div>
+            <div class="horrule"></div>
+            <div class="span-18 last" id="sec_osi">
+              <h2 class="secheader">open source</h2>
+              <div class="span-2" id="os_logo">
+                <img src="http://incubator.apache.org/images/apache-incubator-logo.png">
+              </div>
+              <div class="span-14 last" id="os_desc">
+                <p style="padding-top:10px; padding-left:170px;">S4 was initially released by Yahoo! Inc. in October 2010 and is an Apache Incubator project since September 2011. It is licensed under the Apache 2.0 license.</p>
+              </div>
+            </div>
+            <div class="horrule"></div>
+            <div class="span-18 last" id="sec_overview">
+              <h2 class="secheader">overview</h2>
+              <div class="span-6" id="ov_1">
+                <h4 class="subsecheader">proven</h4>
+                <p>S4 has been deployed in production systems at Yahoo! to process thousands of search queries per second.</p>
+              </div>
+              <div class="span-6" id="ov_2">
+                <h4 class="subsecheader">decentralized</h4>
+                <p>All nodes are symmetric with no centralized service and no single point of failure. This greatly simplifies deployments and cluster configuration changes.</p>
+              </div>
+              <div class="span-6 last" id="ov_3">
+                <h4 class="subsecheader">scalable</h4>
+                <p>Throughput increases linearly as additional nodes are added to the cluster. There is no predefined limit on the number of nodes that can be supported.</p>
+              </div>
+              <div class="span-6" id="ov_4">
+                <h4 class="subsecheader">extensible</h4>
+                <p>Applications can easily be written and deployed using a simple API. Building blocks of the platform (message queues and processors, serializer, checkpointing backend) can be replaced by custom implementations.</p>
+              </div>
+              <div class="span-6" id="ov_5">
+                <h4 class="subsecheader">cluster management</h4>
+                <p>S4 hides all cluster management tasks using a communication layer built on top of  <a href="http://hadoop.apache.org/zookeeper">ZooKeeper</a>, a distributed, open-source coordination service for distributed applications.</p>
+              </div>
+              <div class="span-6 last" id="ov_6">
+                <h4 class="subsecheader">fault-tolerance</h4>
+                <p>When a server in the cluster fails, a stand-by server is automatically activated to take over the tasks. Checkpointing and recovery minimize state loss.</p>
+              </div>
+            </div>
+            <div class="horrule"></div>
+            <div class="span-18" id="sec_motivation">
+              <h2 class="secheader">disclaimer</h2>
+              <p>Apache S4 is an effort undergoing incubation at the Apache Software Foundation (ASF), sponsored by the Apache Incubator PMC.  Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects.  While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="span-5 last" id="sidebar">
+          <div id="download">
+            <div id="latest_head">
+              <span>S4 release</span>
+              <br>
+              <span style="font-size: small;">v0.6.0</span>
+            </div>
+            <div id="latest_link">
+              <a href="http://incubator.apache.org/s4/doc/0.6.0/" style="border: none;">Get Started</a>
+            </div>
+            <div id="disclaimer">
+              <p>There is no guarantee of backwards-compatibility until the 1.0 release.</p>
+            </div>
+          </div>
+          <div id="participate">
+            <h2 class="secheader">participate</h2>
+            <ul class="large greybar">
+              <li><a href="contrib">Contribute</a></li>
+              <li>Join the <a href="https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists" onclick="_gaq.push(['_trackEvent', 'External', 'Forum', 'Index - https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists']);">forum</a>
+</li>
+            </ul>
+          </div>
+          <h2 class="secheader">recent tweets</h2>
+          <div id="twitter_widget">
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+              <script>
+              new TWTR.Widget({
+                version: 2,
+                type: 'profile',
+                rpp: 4,
+                interval: 6000,
+                width: 190,
+                height: 300,
+                theme: {
+                  shell: {
+                    background: '#e6e6e6',
+                    color: '#707070'
+                  },
+                  tweets: {
+                    background: '#ffffff',
+                    color: '#333333',
+                    links: '#7E2217'
+                  }
+                },
+                features: {
+                  scrollbar: false,
+                  loop: false,
+                  live: false,
+                  hashtags: true,
+                  timestamp: true,
+                  avatars: false,
+                  behavior: 'all'
+                }
+              }).render().setUser('s4project').start();
+              </script>
+          </div>
+        </div>
+        <!-- #twitter_follow{:style=>"position: absolute; bottom: 0px;"} -->
+        <!-- %a{:href=>"http://www.twitter.com/s4project", :onClick=> google_analytics_event("External", "Twitter", "Index - http://www.twitter.com/s4project")} -->
+        <!-- %img{:src=>"http://twitter-badges.s3.amazonaws.com/follow_bird_us-c.png", :alt=>"Follow s4project on Twitter"} -->
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <span class="copyright">Apache S4 - Copyright 2013 The Apache Software Foundation</span>
+      </div>
+    </div>
+  </body>
+</html>
